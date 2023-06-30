@@ -192,7 +192,7 @@ class Run():
                 'org_id': self.org_id
             }
         }
-        print(self)
+        print('RUN meta', _request_meta)
         if is_debug == True:
             _addr = self.remote_path + '/linkMLFlow'
             _request_meta['use_mlflow'] = True
