@@ -170,6 +170,7 @@ class Run():
                                              metadata=self.metadata, local_path=sys_path, post_addr=self.logs_remote_path,
                                              buffer_all=self.buffer_all_logs)
         print('logger class registered')
+
         # START ML
         self.started = True
         self.__register_signal_handlers()
@@ -191,6 +192,7 @@ class Run():
                 'org_id': self.org_id
             }
         }
+        print(self)
         if is_debug == True:
             _addr = self.remote_path + '/linkMLFlow'
             _request_meta['use_mlflow'] = True
