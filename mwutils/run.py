@@ -498,4 +498,5 @@ class Run():
             mlflow.end_run()
         self.started = False
         self.run_id = "concluded"
+        self.sys_stat.shutdown()
         print('记录已结束')

@@ -87,7 +87,7 @@ class SystemStats(object):
                     self.sampler[stat] = self.sampler.get(stat, [])
                     self.sampler[stat].append(value)
             self.samples += 1
-            print('sample ++')
+            print('sample ++', self.samples >= self.samples_to_average)
             if self._shutdown or self.samples >= self.samples_to_average:
                 print('trigger flush')
                 self.flush()
